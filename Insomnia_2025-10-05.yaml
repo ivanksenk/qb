@@ -1,0 +1,368 @@
+type: collection.insomnia.rest/5.0
+name: qbeek
+meta:
+  id: wrk_4e412f06a8f54f65888af1a33193ecc5
+  created: 1759577277156
+  modified: 1759577277156
+  description: ""
+collection:
+  - url: http://localhost:4200/api
+    name: Index
+    meta:
+      id: req_d7bd5bfc86ee4bbaaafbf349a5d0b236
+      created: 1759577281460
+      modified: 1759577298131
+      isPrivate: false
+      description: ""
+      sortKey: -1759577281460
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.6.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - name: Auth
+    meta:
+      id: fld_0d5d96a1028c4a6ba7db264429710c03
+      created: 1759579368494
+      modified: 1759579368494
+      sortKey: -1759579368494
+      description: ""
+    children:
+      - url: http://localhost:4200/api/auth/register
+        name: Registration
+        meta:
+          id: req_097acfbd4bbf47ba91bd356625af5f08
+          created: 1759579358578
+          modified: 1759590496377
+          isPrivate: false
+          description: ""
+          sortKey: -1759579372746
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"email":"ivan.ksenk@gmail.com",
+            	"password":"Zxdfrt23."
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:4200/api/auth/login
+        name: Login
+        meta:
+          id: req_c6a2abd0df604c81aa2a5108ff1be6db
+          created: 1759584410510
+          modified: 1759650397070
+          isPrivate: false
+          description: ""
+          sortKey: -1759578327103
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"email":"ivan.ksenk@gmail.com",
+            	"password":"Zxdfrt23."
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:4200/api/auth/refresh
+        name: Refresh
+        meta:
+          id: req_707415c1eca544b8838838952cd60268
+          created: 1759585493554
+          modified: 1759586120014
+          isPrivate: false
+          description: ""
+          sortKey: -1759577804281.5
+        method: POST
+        body:
+          mimeType: application/json
+          text: >-
+            {
+            	"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJpdmFuLmtzZW5rQGdtYWlsLmNvbSIsInJvbGUiOiJNQU5BR0VSIiwiaWF0IjoxNzU5NTg2MTA5LCJleHAiOjE3NjAxOTA5MDl9.xcavRsta3pUvPHRTJ7Gr4wGuxy9it3Mi-TXmnt3KszY" 
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:4200/api/auth/logout
+        name: Logout
+        meta:
+          id: req_3bd3df653c794defbed503be49e6064b
+          created: 1759588306917
+          modified: 1759650645222
+          isPrivate: false
+          description: ""
+          sortKey: -1759577542870.75
+        method: POST
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJpdmFuLmtzZW5rQGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc1OTY1MDQwMSwiZXhwIjoxNzU5NjUxMzAxfQ.iLcoWvhQw2SFivD-x9J7QfKKcLw7dhiTVLKLr268DWc
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:4200/api/auth/changepassword
+        name: Change Password
+        meta:
+          id: req_5622932e13a2403195c934d6cabe992d
+          created: 1759648509757
+          modified: 1759651827426
+          isPrivate: false
+          description: ""
+          sortKey: -1759577412165.375
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"email":"ivan@gmail.com",
+            	"password":"Z12345678!",
+            	"newPassword":"24Agereg!"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJpdmFuLmtzZW5rQGdtYWlsLmNvbSIsInJvbGUiOiJNQU5BR0VSIiwiaWF0IjoxNzU5NTg5OTgzLCJleHAiOjE3NTk1OTA4ODN9.1uvpQpzV3Fv2ftC0tTBpX4mSGw2Md-Z-bMFFRunJnKk
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:4200/api/auth/me
+        name: Me
+        meta:
+          id: req_ee3ec4bd657e4b42998a5dfe0b8a9efa
+          created: 1759666030679
+          modified: 1759666056240
+          isPrivate: false
+          description: ""
+          sortKey: -1759577477518.0625
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJpdmFuLmtzZW5rQGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc1OTY2NjA0NiwiZXhwIjoxNzU5NjY2OTQ2fQ.v2bdOFnVxSkWD4AJQ-MRWBUCeThr8FLjGFCh1fiC3H8
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Users
+    meta:
+      id: fld_a563b99e253d4ccba63f1d46b6fdfd29
+      created: 1759591480030
+      modified: 1759591480030
+      sortKey: -1759591480030
+      description: ""
+    children:
+      - url: http://localhost:4200/api/users
+        name: Get all
+        meta:
+          id: req_3054b32a5e184bc4a4843c57bf201cd4
+          created: 1759591482956
+          modified: 1759652658503
+          isPrivate: false
+          description: ""
+          sortKey: -1759591482956
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJpdmFuLmtzZW5rQGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc1OTY1MjY0OCwiZXhwIjoxNzU5NjUzNTQ4fQ.avyXthYMCjPFt4rV1bwpnNNClahdfSBLjofkcsCLgSo
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:4200/api/users/2
+        name: Get One
+        meta:
+          id: req_8b0dee6def334b208070cb05338936d2
+          created: 1759593398583
+          modified: 1759650980433
+          isPrivate: false
+          description: ""
+          sortKey: -1759585427851
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJpdmFuLmtzZW5rQGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc1OTY1MDk3MCwiZXhwIjoxNzU5NjUxODcwfQ.hXlKVdEgBINh18oZYDASuxxDQoL7uM5HFCwG7GcpCB4
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:4200/api/users/
+        name: Create User
+        meta:
+          id: req_6973a8b9dd46450686af3fbbeb9803a3
+          created: 1759644192998
+          modified: 1759650699498
+          isPrivate: false
+          description: ""
+          sortKey: -1759588455403.5
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"email":"ivan@gmail.com"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJpdmFuLmtzZW5rQGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc1OTY1MDQwMSwiZXhwIjoxNzU5NjUxMzAxfQ.iLcoWvhQw2SFivD-x9J7QfKKcLw7dhiTVLKLr268DWc
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:4200/api/users/9
+        name: Delete User
+        meta:
+          id: req_48ae44092081436f985e97d9bd769a80
+          created: 1759650340786
+          modified: 1759654787464
+          isPrivate: false
+          description: ""
+          sortKey: -1759582400298.5
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJpdmFuLmtzZW5rQGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc1OTY1NDU3OSwiZXhwIjoxNzU5NjU1NDc5fQ.8ADyvxUJiT5AmhKCWuoiKnz4vJzBe2Dnh01PbuLs4Tc
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:4200/api/users/9
+        name: Patch User
+        meta:
+          id: req_f9a66043c35444ce992ff8939d85ae74
+          created: 1759652633575
+          modified: 1759654758214
+          isPrivate: false
+          description: ""
+          sortKey: -1759583914074.75
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"username":"NoIvanksenk",
+            	"role":"ADMIN"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJpdmFuLmtzZW5rQGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc1OTY1NDU3OSwiZXhwIjoxNzU5NjU1NDc5fQ.8ADyvxUJiT5AmhKCWuoiKnz4vJzBe2Dnh01PbuLs4Tc
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_e7aaf08537bed8e5f840acce0c2c6846cafe5f3e
+    created: 1759577277159
+    modified: 1759577277159
+environments:
+  name: Base Environment
+  meta:
+    id: env_e7aaf08537bed8e5f840acce0c2c6846cafe5f3e
+    created: 1759577277158
+    modified: 1759577277158
+    isPrivate: false
