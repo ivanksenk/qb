@@ -20,7 +20,7 @@ docker-compose up -d
 npm run db:generate
 ```
 
-### 3. Генерация Prisma клиента
+### 3. Стартовая миграция
 ```bash
 npm run db:push
 ```
