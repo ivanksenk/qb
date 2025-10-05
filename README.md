@@ -15,17 +15,22 @@ npm install
 docker-compose up -d
 ```
 
-### 3. Генерация Prisma клиента
+### 2. Генерация Prisma клиента
 ```bash
 npm run db:generate
 ```
 
-### 3. Инициализация тестовыми данными
+### 3. Генерация Prisma клиента
 ```bash
+npm run db:push
+```
+
+### 4. Инициализация тестовыми данными
+```bash 
 npm run db:seed
 ```
 
-### 4. Запуск
+### 5. Запуск
 ```bash
 # Разработка
 npm run dev
